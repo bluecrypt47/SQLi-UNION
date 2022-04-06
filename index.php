@@ -12,7 +12,7 @@ if (isset($_GET['ok'])) {
     // $params['cve_id'] = htmlspecialchars($_GET['cveid'], ENT_QUOTES);
     // $params['type'] = htmlspecialchars($_GET['type1'], ENT_QUOTES);
     // $params['platform'] = htmlspecialchars($_GET['pf'], ENT_QUOTES);
-    $sql .= " AND `title` LIKE '%{$title}%'";
+    $sql .= " AND `title` LIKE '%$title%'";
     // if (!empty($params['title'])) {
     //     $sql .= " AND `title` LIKE '%{$params['title']}%'";
     // }
@@ -25,7 +25,7 @@ if (isset($_GET['ok'])) {
     // if (!empty($params['platform'])) {
     //     $sql .= " AND `platform` LIKE '%{$params['platform']}%'";
     // }
-    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
 }
 
 // $result = $conn->query($sql);
@@ -49,7 +49,7 @@ $start = ($c_page - 1) * $limit;
 // get result
 // $sql .= " LIMIT $start, $limit";
 // $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-
+$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -118,7 +118,7 @@ $start = ($c_page - 1) * $limit;
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <form action="index.php" method="get">
-                                        <input type="text" name="title" class="form-control" placeholder="Title" />
+                                        <input type="text" name="title" class="form-control" placeholder="Title" style="width: 900px;" />
                                 </div>
                             </div>
                             <!-- <div class="col-md-2">

