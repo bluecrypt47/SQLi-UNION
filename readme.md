@@ -3,6 +3,7 @@ Ngày: 05/04/2022.
 Mục lục:
 - Khai thác SQLi Union Based chức năng search ở trang index.php
 - LOAD_FILE()
+- OUTFILE()
 ## Khai thác SQLi Union Based chức năng search ở trang index.php
 1. Kiểm tra xem có tổng cộng bao nhiêu cột dữ liệu trong bảng của DB.
 `' ORDER BY 14 #` 
